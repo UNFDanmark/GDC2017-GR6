@@ -15,4 +15,9 @@ public class Hovedmenu : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void StartSpil()
+    {
+        SceneManager.LoadScene("Bane 1");
+    }
 }
