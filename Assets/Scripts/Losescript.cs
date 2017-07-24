@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Losescript : MonoBehaviour {
 
@@ -10,6 +11,11 @@ public class Losescript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("Bane 1");
+    }
 }

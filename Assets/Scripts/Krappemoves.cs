@@ -13,22 +13,19 @@ public class Krappemoves : MonoBehaviour
     public NavMeshAgent navigationAgent;
     public Skildmoves playerSkildpadde;
     public float minimumDistance = 15;
+    public float sidsteDestination = 0;
+    public float nyDestination = 5; 
     
     // Use this for initialization
-    void Start () { 
-	
+    void Start () {
+        sidsteDestination = -nyDestination;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        float distanceFraSkildpadde = (playerSkildpadde.transform.position - transform.position).magnitude;
-        
-        if (distanceFraSkildpadde <= minimumDistance) {
-            navigationAgent.destination = playerSkildpadde.transform.position;
-        }
-        else {
-            navigationAgent.destination = Random.Rang
-                    }
+
+        Move();
+       
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -43,5 +40,24 @@ public class Krappemoves : MonoBehaviour
         SceneManager.LoadScene("Losescene");
 
     }
+
+    public void Move()
+    {
+        float distanceFraSkildpadde = (playerSkildpadde.transform.position - transform.position).magnitude;
+
+        if (distanceFraSkildpadde <= minimumDistance)
+        {
+            navigationAgent.destination = playerSkildpadde.transform.position;
+        }
+        else if ((Time.time - sidsteDestination) >= nyDestination)
+        {
+
+            sidsteDestination = Time.time;
+
+            navigationAgent.destination = new Vector3(Random.Range(-48, 49), 0.5f, Random.Range(-48, 49));
+        }
+
+    }
+
         
 }
