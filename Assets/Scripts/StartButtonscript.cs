@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class StartButtonscript : MonoBehaviour {
 
@@ -12,4 +13,9 @@ public class StartButtonscript : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void StartSpil()
+    {
+        SceneManager.LoadScene("Bane 1");
+    }
 }
