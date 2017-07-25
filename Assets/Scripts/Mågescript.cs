@@ -42,9 +42,11 @@ public class Mågescript : MonoBehaviour
 
         if (distanceFraSkildpadde <= minimumDistance)
         {
+            print("Jagter skildpadde");
+
             NavMeshAgent.destination = playerSkildpadde.transform.position;
 
-            Mågefigur.transform.localPosition = new Vector3(0, distanceFraSkildpadde, 0);
+            Mågefigur.transform.position = new Vector3(transform.position.x, distanceFraSkildpadde, transform.position.z);
 
             NavMeshAgent.speed = hastighedIndenforSkildpadde;
         }

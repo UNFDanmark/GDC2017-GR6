@@ -34,6 +34,10 @@ public class Krappemoves : MonoBehaviour
         {
             KillPlayer();
         }
+        if (collision.collider.CompareTag("HiddenPlayer"))
+        {
+            KillPlayer();
+        }
     }
     public void KillPlayer()
 

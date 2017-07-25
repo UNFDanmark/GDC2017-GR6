@@ -7,26 +7,33 @@ public class Countdownscript : MonoBehaviour {
     
     public float starttid = 60;
     public float sluttid = 0;
-    public Text countdownText;
+    public Text tidsText;
 
     // Use this for initialization
     void Start () {
 	    
 	}
-	
-	//Update is called once per frame
-	void Update () {
+
+    //Update is called once per frame
+    void Update()
+    {
         Nedtælling();
-	}
-        
-        public void Nedtælling()
-  {
+    }
+
+    public void Nedtælling()
+    {
         starttid -= Time.deltaTime;
 
-        if (starttid <= sluttid) {
-        SceneManager.LoadScene("Winscene");
+        tidsText.text = "Time: " + starttid.ToString("N1");
+
+        if (starttid <= sluttid)
+        {
+            SceneManager.LoadScene("Winscene");
         }
-       
+
+
     }
-        
+    
+
 }
+
