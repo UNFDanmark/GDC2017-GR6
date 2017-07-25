@@ -14,8 +14,9 @@ public class Krappemoves : MonoBehaviour
     public Skildmoves playerSkildpadde;
     public float minimumDistance = 15;
     public float sidsteDestination = 0;
-    public float nyDestination = 5; 
-    
+    public float nyDestination = 5;
+    public float Krappeafstandfrajord = 0.5f;
+
     // Use this for initialization
     void Start () {
         sidsteDestination = -nyDestination;
@@ -54,7 +55,7 @@ public class Krappemoves : MonoBehaviour
 
             sidsteDestination = Time.time;
 
-            navigationAgent.destination = new Vector3(Random.Range(-48, 49), 0.5f, Random.Range(-48, 49));
+            navigationAgent.destination = new Vector3(Random.Range(-48, 49), Krappeafstandfrajord, Random.Range(-48, 49));
         }
 
     }
