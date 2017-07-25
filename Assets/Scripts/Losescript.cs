@@ -18,4 +18,5 @@ public class Losescript : MonoBehaviour {
     {
         SceneManager.LoadScene("Bane 1");
     }
+
 }

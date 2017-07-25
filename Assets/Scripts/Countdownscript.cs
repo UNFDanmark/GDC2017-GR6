@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Countdownscript : MonoBehaviour {
     
-    public int starttid = 60;
+    public float starttid = 60;
     public float sluttid = 0;
     public Text countdownText;
 
@@ -21,7 +21,7 @@ public class Countdownscript : MonoBehaviour {
         
         public void Nedtælling()
   {
-        starttid -= Time.deltatime;
+        starttid -= Time.deltaTime;
 
         if (starttid <= sluttid) {
         SceneManager.LoadScene("Winscene");
