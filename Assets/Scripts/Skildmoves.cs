@@ -15,12 +15,11 @@ public class Skildmoves : MonoBehaviour {
     }
 
 	// Update is called once per frame
-    void FixedUpdate() {
+    public void FixedUpdate() {
         Move(moveSpeed * Input.GetAxis("Vertical"));
         transform.Rotate(0, rotationSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0);
         if(Input.GetKey(KeyCode.LeftShift))
         {
-            print("hej");
             inSideShield = true;
             modelinside.SetActive(true);
             modeloutside.SetActive(false);

@@ -14,7 +14,9 @@ public class Mågescript : MonoBehaviour
     public float nyDestination = 5;
     public GameObject Mågefigur;
     public float hastighedIndenforSkildpadde = 20;
-    public float hastighedUdenforSkildpadde = 15; 
+    public float hastighedUdenforSkildpadde = 15;
+    
+    
 
     // Use this for initialization
     void Start()
@@ -23,14 +25,14 @@ public class Mågescript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Move();
     }
 
     void OnCollisionEnter(Collision mågeCollision)
     {
-        if (mågeCollision.collider.CompareTag("Player"))
+        if (mågeCollision.collider.CompareTag("Player") && playerSkildpadde.inSideShield == false)
         {
             Krappemoves.KillPlayer();
         }
@@ -39,17 +41,18 @@ public class Mågescript : MonoBehaviour
     public void Move()
     {
         float distanceFraSkildpadde = (playerSkildpadde.transform.position - transform.position).magnitude;
+        
+        if(playerSkildpadde.inSideShield == false) {
+            if (distanceFraSkildpadde <= minimumDistance)
+            {
+                NavMeshAgent.destination = playerSkildpadde.transform.position;
 
-        if (distanceFraSkildpadde <= minimumDistance)
-        {
-            print("Jagter skildpadde");
+                Mågefigur.transform.position = new Vector3(transform.position.x, distanceFraSkildpadde, transform.position.z);
 
-            NavMeshAgent.destination = playerSkildpadde.transform.position;
-
-            Mågefigur.transform.position = new Vector3(transform.position.x, distanceFraSkildpadde, transform.position.z);
-
-            NavMeshAgent.speed = hastighedIndenforSkildpadde;
+                NavMeshAgent.speed = hastighedIndenforSkildpadde;
+            }
         }
+        
         else if ((Time.time - sidsteDestination) >= nyDestination)
         {
 
