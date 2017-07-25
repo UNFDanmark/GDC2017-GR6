@@ -41,15 +41,17 @@ public class Mågescript : MonoBehaviour
     public void Move()
     {
         float distanceFraSkildpadde = (playerSkildpadde.transform.position - transform.position).magnitude;
-        
-        if(playerSkildpadde.inSideShield == false) {
+        Mågefigur.transform.position = new Vector3(transform.position.x, distanceFraSkildpadde, transform.position.z);
+
+        if (playerSkildpadde.inSideShield == false) {
             if (distanceFraSkildpadde <= minimumDistance)
             {
                 NavMeshAgent.destination = playerSkildpadde.transform.position;
 
-                Mågefigur.transform.position = new Vector3(transform.position.x, distanceFraSkildpadde, transform.position.z);
-
                 NavMeshAgent.speed = hastighedIndenforSkildpadde;
+            }
+            else {
+                NavMeshAgent.destination = new Vector3(Random.Range(-48, 49), 2, Random.Range(-48, 49));
             }
         }
         
@@ -59,7 +61,8 @@ public class Mågescript : MonoBehaviour
             sidsteDestination = Time.time;
 
             NavMeshAgent.destination = new Vector3(Random.Range(-48, 49), 2, Random.Range(-48, 49));
-            
+            print(gameObject.name + " " + NavMeshAgent.destination);
+
             NavMeshAgent.speed = hastighedUdenforSkildpadde; 
         }
     }
