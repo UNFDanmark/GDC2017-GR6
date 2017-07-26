@@ -11,8 +11,6 @@ public class StartButtonscript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        StartSpil();
 	
 	}
 
