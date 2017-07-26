@@ -9,12 +9,16 @@ public class Skildmoves : MonoBehaviour {
     public bool inSideShield = false;
     public GameObject modelinside;  
     public GameObject modeloutside;
+ 
+
     // Use this for initialization
     void Start () {
-        
     }
 
 	// Update is called once per frame
+    public void Update () {
+
+    }
     public void FixedUpdate() {
         Move(moveSpeed * Input.GetAxis("Vertical"));
         transform.Rotate(0, rotationSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0);
@@ -31,6 +35,7 @@ public class Skildmoves : MonoBehaviour {
             modeloutside.SetActive(true);
         }
     }
+
 
     void Move(float speed) {
     if(inSideShield == false)
