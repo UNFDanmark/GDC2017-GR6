@@ -15,6 +15,7 @@ public class Mågescript : MonoBehaviour
     public GameObject Mågefigur;
     public float hastighedIndenforSkildpadde = 20;
     public float hastighedUdenforSkildpadde = 15;
+    public float nyDestinationIndenforSkildpadde = 1; 
     
     
 
@@ -30,9 +31,9 @@ public class Mågescript : MonoBehaviour
         Move();
     }
 
-    void OnCollisionEnter(Collision mågeCollision)
+    void OnTriggerEnter(Collider mågeCollision)
     {
-        if (mågeCollision.collider.CompareTag("Player") && playerSkildpadde.inSideShield == false)
+        if (mågeCollision.CompareTag("Player") && playerSkildpadde.inSideShield == false)
         {
             Krappemoves.KillPlayer();
         }
@@ -43,24 +44,29 @@ public class Mågescript : MonoBehaviour
         float distanceFraSkildpadde = (playerSkildpadde.transform.position - transform.position).magnitude;
         Mågefigur.transform.position = new Vector3(transform.position.x, distanceFraSkildpadde, transform.position.z);
 
-        if (playerSkildpadde.inSideShield == false) {
+        if (playerSkildpadde.inSideShield == false) { 
             if (distanceFraSkildpadde <= minimumDistance)
             {
-                NavMeshAgent.destination = playerSkildpadde.transform.position;
 
-                NavMeshAgent.speed = hastighedIndenforSkildpadde;
+                if((Time.time - sidsteDestination) >= nyDestinationIndenforSkildpadde){
+
+                    NavMeshAgent.destination = playerSkildpadde.transform.position;
+
+                    NavMeshAgent.speed = hastighedIndenforSkildpadde;
+                }
             }
             else {
-                NavMeshAgent.destination = new Vector3(Random.Range(-48, 49), 2, Random.Range(-48, 49));
+                NavMeshAgent.destination = new Vector3(Random.Range(-45, 46), 1.5f, Random.Range(-45, 46));
             }
         }
+
         
         else if ((Time.time - sidsteDestination) >= nyDestination)
         {
 
             sidsteDestination = Time.time;
 
-            NavMeshAgent.destination = new Vector3(Random.Range(-48, 49), 2, Random.Range(-48, 49));
+            NavMeshAgent.destination = new Vector3(Random.Range(-45, 46), 1.5f, Random.Range(-45, 46));
             print(gameObject.name + " " + NavMeshAgent.destination);
 
             NavMeshAgent.speed = hastighedUdenforSkildpadde; 

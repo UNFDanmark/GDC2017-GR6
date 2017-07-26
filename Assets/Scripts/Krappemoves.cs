@@ -16,6 +16,8 @@ public class Krappemoves : MonoBehaviour
     public float sidsteDestination = 0;
     public float nyDestination = 5;
     public float Krappeafstandfrajord = 0.5f;
+    public float hastighedIndenforSkildpadde = 20;
+    public float hastighedUdenforSkildpadde = 15;
 
     // Use this for initialization
     void Start () {
@@ -53,6 +55,8 @@ public class Krappemoves : MonoBehaviour
         if (distanceFraSkildpadde <= minimumDistance)
         {
             navigationAgent.destination = playerSkildpadde.transform.position;
+
+            navigationAgent.speed = hastighedIndenforSkildpadde;
         }
         else if ((Time.time - sidsteDestination) >= nyDestination)
         {
@@ -60,6 +64,9 @@ public class Krappemoves : MonoBehaviour
             sidsteDestination = Time.time;
 
             navigationAgent.destination = new Vector3(Random.Range(-48, 49), Krappeafstandfrajord, Random.Range(-48, 49));
+
+            navigationAgent.speed = hastighedUdenforSkildpadde;
+
         }
 
     }
