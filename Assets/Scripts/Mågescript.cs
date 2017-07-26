@@ -15,14 +15,24 @@ public class Mågescript : MonoBehaviour
     public GameObject Mågefigur;
     public float hastighedIndenforSkildpadde = 20;
     public float hastighedUdenforSkildpadde = 15;
-    public float nyDestinationIndenforSkildpadde = 1; 
+    public float nyDestinationIndenforSkildpadde = 5;
+    public float sidsteDestinationIndeforSkildpadde = 0; 
     
     
 
     // Use this for initialization
     void Start()
     {
-        sidsteDestination = -nyDestination;
+        Reset();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+
+            Reset();
+        }
+        
     }
 
     // Update is called once per frame
@@ -47,15 +57,18 @@ public class Mågescript : MonoBehaviour
         if (playerSkildpadde.inSideShield == false) { 
             if (distanceFraSkildpadde <= minimumDistance)
             {
-
-                if((Time.time - sidsteDestination) >= nyDestinationIndenforSkildpadde){
-
+            
                     NavMeshAgent.destination = playerSkildpadde.transform.position;
 
                     NavMeshAgent.speed = hastighedIndenforSkildpadde;
-                }
+               
             }
-            else {
+
+           else if ((Time.time - sidsteDestinationIndeforSkildpadde) >= nyDestinationIndenforSkildpadde)
+           { 
+
+                sidsteDestinationIndeforSkildpadde = Time.time;
+
                 NavMeshAgent.destination = new Vector3(Random.Range(-45, 46), 1.5f, Random.Range(-45, 46));
             }
         }
@@ -71,5 +84,12 @@ public class Mågescript : MonoBehaviour
 
             NavMeshAgent.speed = hastighedUdenforSkildpadde; 
         }
+    }
+
+    public void Reset()
+    {
+        sidsteDestination = -nyDestination;
+        sidsteDestinationIndeforSkildpadde = -nyDestinationIndenforSkildpadde;
+
     }
 }
