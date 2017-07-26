@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: f06c8b89674e6f540bb907873f02f87c
+timeCreated: 1501093036
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: headbone
+    100002: headbonenubb
+    100004: "h\xF8jrearm del 1"
+    100006: "h\xF8jrearm del 2"
+    100008: "h\xF8jrearm nubb"
+    100010: "h\xF8jreben 1 del 1"
+    100012: "h\xF8jreben 1 del 2"
+    100014: "h\xF8jreben 1 nubb"
+    100016: "h\xF8jreben 2 del 1"
+    100018: "h\xF8jreben 2 del 2"
+    100020: "h\xF8jreben 3 del 1"
+    100022: "h\xF8jreben 3 del 2"
+    100024: "h\xF8jreben 3 nubb"
+    100026: "h\xF8reben 2 nubb"
+    100028: krabbe
+    100030: //RootNode
+    100032: master
+    100034: masternubb
+    100036: venstrearm del 1
+    100038: venstrearm del 2
+    100040: venstrearm nubb
+    100042: venstreben 1  del 2
+    100044: venstreben 1 del 1
+    100046: venstreben 1 nubb
+    100048: venstreben 2  nubb
+    100050: venstreben 2 del 1
+    100052: venstreben 2 del 2
+    100054: venstreben 3 del 1
+    100056: venstreben 3 del 2
+    100058: venstreben 3 nubb
+    400000: headbone
+    400002: headbonenubb
+    400004: "h\xF8jrearm del 1"
+    400006: "h\xF8jrearm del 2"
+    400008: "h\xF8jrearm nubb"
+    400010: "h\xF8jreben 1 del 1"
+    400012: "h\xF8jreben 1 del 2"
+    400014: "h\xF8jreben 1 nubb"
+    400016: "h\xF8jreben 2 del 1"
+    400018: "h\xF8jreben 2 del 2"
+    400020: "h\xF8jreben 3 del 1"
+    400022: "h\xF8jreben 3 del 2"
+    400024: "h\xF8jreben 3 nubb"
+    400026: "h\xF8reben 2 nubb"
+    400028: krabbe
+    400030: //RootNode
+    400032: master
+    400034: masternubb
+    400036: venstrearm del 1
+    400038: venstrearm del 2
+    400040: venstrearm nubb
+    400042: venstreben 1  del 2
+    400044: venstreben 1 del 1
+    400046: venstreben 1 nubb
+    400048: venstreben 2  nubb
+    400050: venstreben 2 del 1
+    400052: venstreben 2 del 2
+    400054: venstreben 3 del 1
+    400056: venstreben 3 del 2
+    400058: venstreben 3 nubb
+    4300000: krabbe
+    7400000: Krappegang
+    9500000: //RootNode
+    13700000: krabbe
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Krappegang
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 92
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: headbone
+        weight: 1
+      - path: headbone/headbonenubb
+        weight: 1
+      - path: "h\xF8jrearm del 1"
+        weight: 1
+      - path: "h\xF8jrearm del 1/h\xF8jrearm del 2"
+        weight: 1
+      - path: "h\xF8jrearm del 1/h\xF8jrearm del 2/h\xF8jrearm nubb"
+        weight: 1
+      - path: "h\xF8jreben 1 del 1"
+        weight: 1
+      - path: "h\xF8jreben 1 del 1/h\xF8jreben 1 del 2"
+        weight: 1
+      - path: "h\xF8jreben 1 del 1/h\xF8jreben 1 del 2/h\xF8jreben 1 nubb"
+        weight: 1
+      - path: "h\xF8jreben 2 del 1"
+        weight: 1
+      - path: "h\xF8jreben 2 del 1/h\xF8jreben 2 del 2"
+        weight: 1
+      - path: "h\xF8jreben 2 del 1/h\xF8jreben 2 del 2/h\xF8reben 2 nubb"
+        weight: 1
+      - path: "h\xF8jreben 3 del 1"
+        weight: 1
+      - path: "h\xF8jreben 3 del 1/h\xF8jreben 3 del 2"
+        weight: 1
+      - path: "h\xF8jreben 3 del 1/h\xF8jreben 3 del 2/h\xF8jreben 3 nubb"
+        weight: 1
+      - path: krabbe
+        weight: 1
+      - path: master
+        weight: 1
+      - path: master/masternubb
+        weight: 1
+      - path: venstrearm del 1
+        weight: 1
+      - path: venstrearm del 1/venstrearm del 2
+        weight: 1
+      - path: venstrearm del 1/venstrearm del 2/venstrearm nubb
+        weight: 1
+      - path: venstreben 1 del 1
+        weight: 1
+      - path: venstreben 1 del 1/venstreben 1  del 2
+        weight: 1
+      - path: venstreben 1 del 1/venstreben 1  del 2/venstreben 1 nubb
+        weight: 1
+      - path: venstreben 2 del 1
+        weight: 1
+      - path: venstreben 2 del 1/venstreben 2 del 2
+        weight: 1
+      - path: venstreben 2 del 1/venstreben 2 del 2/venstreben 2  nubb
+        weight: 1
+      - path: venstreben 3 del 1
+        weight: 1
+      - path: venstreben 3 del 1/venstreben 3 del 2
+        weight: 1
+      - path: venstreben 3 del 1/venstreben 3 del 2/venstreben 3 nubb
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

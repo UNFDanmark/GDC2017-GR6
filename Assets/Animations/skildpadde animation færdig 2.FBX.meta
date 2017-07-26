@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: ea2de2b705f81294c8f44a96a205b448
-timeCreated: 1501080508
+guid: 1a668ecf8c03eb94f920b46f03aff581
+timeCreated: 1501088248
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -42,7 +42,7 @@ ModelImporter:
     400032: venstreben 2 del 2
     400034: venstreben 2 nubb
     4300000: skildpadde
-    7400000: Take 001
+    7400000: Skildpaddewalk
     9500000: //RootNode
     13700000: skildpadde
   materials:
@@ -65,7 +65,71 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Skildpaddewalk
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: headbone
+        weight: 1
+      - path: headbone/headbone nubb
+        weight: 1
+      - path: "h\xF8jreben 1 del 1"
+        weight: 1
+      - path: "h\xF8jreben 1 del 1/h\xF8jreben 1 del 2"
+        weight: 1
+      - path: "h\xF8jreben 1 del 1/h\xF8jreben 1 del 2/h\xF8jreben 1 nubb"
+        weight: 1
+      - path: "h\xF8jreben 2 del 1"
+        weight: 1
+      - path: "h\xF8jreben 2 del 1/h\xF8jreben 2 del 2"
+        weight: 1
+      - path: "h\xF8jreben 2 del 1/h\xF8jreben 2 del 2/h\xF8jreben 2 nubb"
+        weight: 1
+      - path: masterbone
+        weight: 1
+      - path: masterbone/masterbone nubb
+        weight: 1
+      - path: skildpadde
+        weight: 1
+      - path: venstreben 1 del 1
+        weight: 1
+      - path: venstreben 1 del 1/vensteben 1 del 2
+        weight: 1
+      - path: venstreben 1 del 1/vensteben 1 del 2/venstreben 1 nubb
+        weight: 1
+      - path: venstreben 2 del 1
+        weight: 1
+      - path: venstreben 2 del 1/venstreben 2 del 2
+        weight: 1
+      - path: venstreben 2 del 1/venstreben 2 del 2/venstreben 2 nubb
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
