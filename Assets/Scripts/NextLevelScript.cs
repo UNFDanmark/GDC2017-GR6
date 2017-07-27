@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class StartButtonscript : MonoBehaviour {
+public class NextLevelScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -12,10 +12,13 @@ public class StartButtonscript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+
 	}
 
-    public void StartSpil()
+    public void NextLevel()
     {
-        SceneManager.LoadScene("Introscene");
+
+        SceneManager.LoadScene("Bane 2"); 
     }
+
 }

@@ -55,30 +55,30 @@ public class Mågescript : MonoBehaviour
         float distanceFraSkildpadde = (playerSkildpadde.transform.position - transform.position).magnitude;
         Mågefigur.transform.position = new Vector3(transform.position.x, distanceFraSkildpadde, transform.position.z);
 
-        float distanceFraDestination = (NavMeshAgent.destination - transform.position).magnitude; 
+        float distanceFraDestination = (NavMeshAgent.destination - transform.position).magnitude;
 
-        if (playerSkildpadde.inSideShield == false) { 
+        if (playerSkildpadde.inSideShield == false)
+        {
             if (distanceFraSkildpadde <= minimumDistance)
             {
-            
-                    NavMeshAgent.destination = playerSkildpadde.transform.position;
 
-                    NavMeshAgent.speed = hastighedIndenforSkildpadde;
-                    if(myAudio.isPlaying == false) {
-                        myAudio.Play(); 
-                    }
-                                                  
-            }   
+                NavMeshAgent.destination = playerSkildpadde.transform.position;
 
-      else if (distanceFraDestination <= tætPåDestinationDistance)
-           {
+                NavMeshAgent.speed = hastighedIndenforSkildpadde;
+                if (myAudio.isPlaying == false)
+                {
+                    myAudio.Play();
+                }
+
+            }
+
+            else if (distanceFraDestination <= tætPåDestinationDistance)
+            {
 
                 ResetPosition();
-                
+
             }
         }
-
-        
         else if (distanceFraDestination <= tætPåDestinationDistance)
         {
 
@@ -86,7 +86,7 @@ public class Mågescript : MonoBehaviour
 
             print(gameObject.name + " " + NavMeshAgent.destination);
 
-            NavMeshAgent.speed = hastighedUdenforSkildpadde; 
+            NavMeshAgent.speed = hastighedUdenforSkildpadde;
         }
     }
 

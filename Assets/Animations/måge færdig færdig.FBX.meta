@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: 86967f06393698441a4998a661870d4d
+timeCreated: 1501180884
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bone007
+    100002: Bone010
+    100004: headbone
+    100006: headbone nubb
+    100008: "h\xF8jre vinge del 1"
+    100010: "h\xF8jre vinge del 2"
+    100012: masterbone
+    100014: masterbone nubb
+    100016: //RootNode
+    100018: venstre vinge del 1
+    100020: venstre vinge del 2
+    400000: Bone007
+    400002: Bone010
+    400004: headbone
+    400006: headbone nubb
+    400008: "h\xF8jre vinge del 1"
+    400010: "h\xF8jre vinge del 2"
+    400012: masterbone
+    400014: masterbone nubb
+    400016: //RootNode
+    400018: venstre vinge del 1
+    400020: venstre vinge del 2
+    4300000: fugl
+    7400000: "M\xE5gemove"
+    9500000: //RootNode
+    13700000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: "M\xE5gemove"
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: masterbone
+        weight: 1
+      - path: masterbone/headbone
+        weight: 1
+      - path: masterbone/headbone/headbone nubb
+        weight: 1
+      - path: "masterbone/h\xF8jre vinge del 1"
+        weight: 1
+      - path: "masterbone/h\xF8jre vinge del 1/h\xF8jre vinge del 2"
+        weight: 1
+      - path: "masterbone/h\xF8jre vinge del 1/h\xF8jre vinge del 2/Bone007"
+        weight: 1
+      - path: masterbone/masterbone nubb
+        weight: 1
+      - path: masterbone/venstre vinge del 1
+        weight: 1
+      - path: masterbone/venstre vinge del 1/venstre vinge del 2
+        weight: 1
+      - path: masterbone/venstre vinge del 1/venstre vinge del 2/Bone010
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
