@@ -6,7 +6,7 @@ public class Bølgescript : MonoBehaviour {
 
     public bool harViVundet = false;
     public float tidForBølge = 0;
-    public float glideTime = 2;
+    public float glideTime = 1;
 
 	// Use this for initialization
 	void Start () {

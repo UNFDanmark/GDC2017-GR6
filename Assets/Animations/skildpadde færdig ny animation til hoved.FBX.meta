@@ -1,38 +1,54 @@
 fileFormatVersion: 2
-guid: 7a3d209f69c45a847b52ad3bcbaac6b6
-timeCreated: 1501165012
+guid: b48c9f14048135847b14a493ec38efad
+timeCreated: 1501180044
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Bone007
-    100002: Bone010
-    100004: fugl
-    100006: headbone
-    100008: headbone nubb
-    100010: "h\xF8jre vinge del 1"
-    100012: "h\xF8jre vinge del 2"
-    100014: masterbone
-    100016: masterbone nubb
-    100018: //RootNode
-    100020: venstre vinge del 1
-    100022: venstre vinge del 2
-    400000: Bone007
-    400002: Bone010
-    400004: fugl
-    400006: headbone
-    400008: headbone nubb
-    400010: "h\xF8jre vinge del 1"
-    400012: "h\xF8jre vinge del 2"
-    400014: masterbone
-    400016: masterbone nubb
-    400018: //RootNode
-    400020: venstre vinge del 1
-    400022: venstre vinge del 2
-    4300000: fugl
-    7400000: "M\xE5geflyvning"
+    100000: Bone002
+    100002: headbone
+    100004: headbone nubb
+    100006: hovede
+    100008: "h\xF8jreben 1 del 1"
+    100010: "h\xF8jreben 1 del 2"
+    100012: "h\xF8jreben 1 nubb"
+    100014: "h\xF8jreben 2 del 1"
+    100016: "h\xF8jreben 2 del 2"
+    100018: "h\xF8jreben 2 nubb"
+    100020: masterbone
+    100022: masterbone nubb
+    100024: skildpadde
+    100026: //RootNode
+    100028: vensteben 1 del 2
+    100030: venstreben 1 del 1
+    100032: venstreben 1 nubb
+    100034: venstreben 2 del 1
+    100036: venstreben 2 del 2
+    100038: venstreben 2 nubb
+    400000: Bone002
+    400002: headbone
+    400004: headbone nubb
+    400006: hovede
+    400008: "h\xF8jreben 1 del 1"
+    400010: "h\xF8jreben 1 del 2"
+    400012: "h\xF8jreben 1 nubb"
+    400014: "h\xF8jreben 2 del 1"
+    400016: "h\xF8jreben 2 del 2"
+    400018: "h\xF8jreben 2 nubb"
+    400020: masterbone
+    400022: masterbone nubb
+    400024: skildpadde
+    400026: //RootNode
+    400028: vensteben 1 del 2
+    400030: venstreben 1 del 1
+    400032: venstreben 1 nubb
+    400034: venstreben 2 del 1
+    400036: venstreben 2 del 2
+    400038: venstreben 2 nubb
+    4300000: skildpadde
+    7400000: Hovedwalk
     9500000: //RootNode
-    13700000: fugl
+    13700000: skildpadde
   materials:
     importMaterials: 1
     materialName: 0
@@ -55,17 +71,17 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: "M\xE5geflyvning"
+      name: Hovedwalk
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 47
+      lastFrame: 90
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -81,27 +97,43 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: fugl
-        weight: 1
       - path: headbone
         weight: 1
       - path: headbone/headbone nubb
         weight: 1
-      - path: "h\xF8jre vinge del 1"
+      - path: hovede
         weight: 1
-      - path: "h\xF8jre vinge del 1/h\xF8jre vinge del 2"
+      - path: hovede/Bone002
         weight: 1
-      - path: "h\xF8jre vinge del 1/h\xF8jre vinge del 2/Bone007"
+      - path: "h\xF8jreben 1 del 1"
+        weight: 1
+      - path: "h\xF8jreben 1 del 1/h\xF8jreben 1 del 2"
+        weight: 1
+      - path: "h\xF8jreben 1 del 1/h\xF8jreben 1 del 2/h\xF8jreben 1 nubb"
+        weight: 1
+      - path: "h\xF8jreben 2 del 1"
+        weight: 1
+      - path: "h\xF8jreben 2 del 1/h\xF8jreben 2 del 2"
+        weight: 1
+      - path: "h\xF8jreben 2 del 1/h\xF8jreben 2 del 2/h\xF8jreben 2 nubb"
         weight: 1
       - path: masterbone
         weight: 1
       - path: masterbone/masterbone nubb
         weight: 1
-      - path: venstre vinge del 1
+      - path: skildpadde
         weight: 1
-      - path: venstre vinge del 1/venstre vinge del 2
+      - path: venstreben 1 del 1
         weight: 1
-      - path: venstre vinge del 1/venstre vinge del 2/Bone010
+      - path: venstreben 1 del 1/vensteben 1 del 2
+        weight: 1
+      - path: venstreben 1 del 1/vensteben 1 del 2/venstreben 1 nubb
+        weight: 1
+      - path: venstreben 2 del 1
+        weight: 1
+      - path: venstreben 2 del 1/venstreben 2 del 2
+        weight: 1
+      - path: venstreben 2 del 1/venstreben 2 del 2/venstreben 2 nubb
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
