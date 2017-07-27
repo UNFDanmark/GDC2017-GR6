@@ -8,6 +8,7 @@ public class Countdownscript : MonoBehaviour {
     public float starttid = 60;
     public float sluttid = 0;
     public Text tidsText;
+    public Bølgescript bølge; 
 
     // Use this for initialization
     void Start () {
@@ -28,12 +29,18 @@ public class Countdownscript : MonoBehaviour {
 
         if (starttid <= sluttid)
         {
-            SceneManager.LoadScene("Winscene");
+            Win(); 
+
         }
 
 
     }
-    
+
+    public void Win()
+    {
+        bølge.harViVundet = true;
+
+    }
 
 }
 

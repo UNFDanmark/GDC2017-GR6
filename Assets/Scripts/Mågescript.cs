@@ -13,9 +13,13 @@ public class Mågescript : MonoBehaviour
     public GameObject Mågefigur;
     public float hastighedIndenforSkildpadde = 20;
     public float hastighedUdenforSkildpadde = 15;
-    public float tætPåDestinationDistance = 1; 
-    
-    
+    public float tætPåDestinationDistance = 1;
+    public AudioSource myAudio;
+    public AudioClip mågeskrig;
+    void Awake() {
+
+        myAudio = GetComponent<AudioSource>();
+    }
 
     // Use this for initialization
     void Start()
@@ -60,8 +64,11 @@ public class Mågescript : MonoBehaviour
                     NavMeshAgent.destination = playerSkildpadde.transform.position;
 
                     NavMeshAgent.speed = hastighedIndenforSkildpadde;
-               
-            }
+                    if(myAudio.isPlaying == false) {
+                        myAudio.Play(); 
+                    }
+                                                  
+            }   
 
       else if (distanceFraDestination <= tætPåDestinationDistance)
            {

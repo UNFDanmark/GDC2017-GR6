@@ -17,11 +17,14 @@ public class Krappemoves : MonoBehaviour
     public float hastighedIndenforSkildpadde = 20;
     public float hastighedUdenforSkildpadde = 15;
     public float tætPåDestination = 1;
-
+    public Bølgescript bølge;
     // Use this for initialization
+    void Awake() {
+        bølge = FindObjectOfType<Bølgescript>();
+    }
     void Start () {
-        
-	}
+        navigationAgent.destination = new Vector3(Random.Range(-65, 66), Krappeafstandfrajord, Random.Range(-65, 66));
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -41,17 +44,17 @@ public class Krappemoves : MonoBehaviour
         }
     }
     public void KillPlayer()
-
     {
-        SceneManager.LoadScene("Losescene");
-
+        if(bølge.harViVundet == false) {
+            SceneManager.LoadScene("Losescene");
+        }
     }
 
     public void Move()
     {
         float distanceFraSkildpadde = (playerSkildpadde.transform.position - transform.position).magnitude;
-        float distanceFraDestination = (navigationAgent.destination = playerSkildpadde.transform.position).magnitude;
-
+        float distanceFraDestination = (navigationAgent.destination - transform.position).magnitude;
+        print(distanceFraDestination);
         if (distanceFraSkildpadde <= minimumDistance)
         {
             navigationAgent.destination = playerSkildpadde.transform.position;
@@ -60,11 +63,9 @@ public class Krappemoves : MonoBehaviour
         }
         else if (distanceFraDestination <= tætPåDestination)
         {
-
             navigationAgent.destination = new Vector3(Random.Range(-65, 66), Krappeafstandfrajord, Random.Range(-65, 66));
 
             navigationAgent.speed = hastighedUdenforSkildpadde;
-
         }
 
     }
