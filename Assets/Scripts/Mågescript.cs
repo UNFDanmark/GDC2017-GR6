@@ -10,27 +10,24 @@ public class Mågescript : MonoBehaviour
     public Skildmoves playerSkildpadde;
     public Krappemoves Krappemoves;
     public float minimumDistance = 15;
-    public float sidsteDestination = 0;
-    public float nyDestination = 5;
     public GameObject Mågefigur;
     public float hastighedIndenforSkildpadde = 20;
     public float hastighedUdenforSkildpadde = 15;
-    public float nyDestinationIndenforSkildpadde = 5;
-    public float sidsteDestinationIndeforSkildpadde = 0; 
+    public float tætPåDestinationDistance = 1; 
     
     
 
     // Use this for initialization
     void Start()
     {
-        Reset();
+        ResetPosition();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)) {
 
-            Reset();
+            ResetPosition();
         }
         
     }
@@ -54,6 +51,8 @@ public class Mågescript : MonoBehaviour
         float distanceFraSkildpadde = (playerSkildpadde.transform.position - transform.position).magnitude;
         Mågefigur.transform.position = new Vector3(transform.position.x, distanceFraSkildpadde, transform.position.z);
 
+        float distanceFraDestination = (NavMeshAgent.destination - transform.position).magnitude; 
+
         if (playerSkildpadde.inSideShield == false) { 
             if (distanceFraSkildpadde <= minimumDistance)
             {
@@ -64,32 +63,28 @@ public class Mågescript : MonoBehaviour
                
             }
 
-           else if ((Time.time - sidsteDestinationIndeforSkildpadde) >= nyDestinationIndenforSkildpadde)
-           { 
+      else if (distanceFraDestination <= tætPåDestinationDistance)
+           {
 
-                sidsteDestinationIndeforSkildpadde = Time.time;
-
-                NavMeshAgent.destination = new Vector3(Random.Range(-65, 66), 1.5f, Random.Range(-65, 66));
+                ResetPosition();
+                
             }
         }
 
         
-        else if ((Time.time - sidsteDestination) >= nyDestination)
+        else if (distanceFraDestination <= tætPåDestinationDistance)
         {
 
-            sidsteDestination = Time.time;
+            ResetPosition();
 
-            NavMeshAgent.destination = new Vector3(Random.Range(-65, 66), 1.5f, Random.Range(-65, 66));
             print(gameObject.name + " " + NavMeshAgent.destination);
 
             NavMeshAgent.speed = hastighedUdenforSkildpadde; 
         }
     }
 
-    public void Reset()
+    public void ResetPosition()
     {
-        sidsteDestination = -nyDestination;
-        sidsteDestinationIndeforSkildpadde = -nyDestinationIndenforSkildpadde;
-
+        NavMeshAgent.destination = new Vector3(Random.Range(-65, 66), 1.5f, Random.Range(-65, 66));
     }
 }

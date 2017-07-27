@@ -13,15 +13,14 @@ public class Krappemoves : MonoBehaviour
     public NavMeshAgent navigationAgent;
     public Skildmoves playerSkildpadde;
     public float minimumDistance = 15;
-    public float sidsteDestination = 0;
-    public float nyDestination = 5;
     public float Krappeafstandfrajord = 0.5f;
     public float hastighedIndenforSkildpadde = 20;
     public float hastighedUdenforSkildpadde = 15;
+    public float tætPåDestination = 1;
 
     // Use this for initialization
     void Start () {
-        sidsteDestination = -nyDestination;
+        
 	}
 	
 	// Update is called once per frame
@@ -51,6 +50,7 @@ public class Krappemoves : MonoBehaviour
     public void Move()
     {
         float distanceFraSkildpadde = (playerSkildpadde.transform.position - transform.position).magnitude;
+        float distanceFraDestination = (navigationAgent.destination = playerSkildpadde.transform.position).magnitude;
 
         if (distanceFraSkildpadde <= minimumDistance)
         {
@@ -58,10 +58,8 @@ public class Krappemoves : MonoBehaviour
 
             navigationAgent.speed = hastighedIndenforSkildpadde;
         }
-        else if ((Time.time - sidsteDestination) >= nyDestination)
+        else if (distanceFraDestination <= tætPåDestination)
         {
-
-            sidsteDestination = Time.time;
 
             navigationAgent.destination = new Vector3(Random.Range(-65, 66), Krappeafstandfrajord, Random.Range(-65, 66));
 
