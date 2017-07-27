@@ -18,9 +18,15 @@ public class Krappemoves : MonoBehaviour
     public float hastighedUdenforSkildpadde = 15;
     public float tætPåDestination = 1;
     public Bølgescript bølge;
+    public AudioSource myAudio;
+    public AudioClip KrappeKlitren;
+
     // Use this for initialization
     void Awake() {
+
         bølge = FindObjectOfType<Bølgescript>();
+
+        myAudio = GetComponent < AudioSource > ();
     }
     void Start () {
         navigationAgent.destination = new Vector3(Random.Range(-65, 66), Krappeafstandfrajord, Random.Range(-65, 66));
@@ -60,6 +66,12 @@ public class Krappemoves : MonoBehaviour
             navigationAgent.destination = playerSkildpadde.transform.position;
 
             navigationAgent.speed = hastighedIndenforSkildpadde;
+
+            if (myAudio.isPlaying == false)
+            {
+                myAudio.Play();
+            }
+
         }
         else if (distanceFraDestination <= tætPåDestination)
         {
