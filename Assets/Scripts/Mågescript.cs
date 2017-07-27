@@ -69,7 +69,7 @@ public class Mågescript : MonoBehaviour
 
                 sidsteDestinationIndeforSkildpadde = Time.time;
 
-                NavMeshAgent.destination = new Vector3(Random.Range(-45, 46), 1.5f, Random.Range(-45, 46));
+                NavMeshAgent.destination = new Vector3(Random.Range(-65, 66), 1.5f, Random.Range(-65, 66));
             }
         }
 
@@ -79,7 +79,7 @@ public class Mågescript : MonoBehaviour
 
             sidsteDestination = Time.time;
 
-            NavMeshAgent.destination = new Vector3(Random.Range(-45, 46), 1.5f, Random.Range(-45, 46));
+            NavMeshAgent.destination = new Vector3(Random.Range(-65, 66), 1.5f, Random.Range(-65, 66));
             print(gameObject.name + " " + NavMeshAgent.destination);
 
             NavMeshAgent.speed = hastighedUdenforSkildpadde; 

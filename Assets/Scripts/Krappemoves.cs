@@ -63,7 +63,7 @@ public class Krappemoves : MonoBehaviour
 
             sidsteDestination = Time.time;
 
-            navigationAgent.destination = new Vector3(Random.Range(-48, 49), Krappeafstandfrajord, Random.Range(-48, 49));
+            navigationAgent.destination = new Vector3(Random.Range(-65, 66), Krappeafstandfrajord, Random.Range(-65, 66));
 
             navigationAgent.speed = hastighedUdenforSkildpadde;
 
