@@ -92,6 +92,6 @@ public class Mågescript : MonoBehaviour
 
     public void ResetPosition()
     {
-        NavMeshAgent.destination = new Vector3(Random.Range(-65, 66), 1.5f, Random.Range(-65, 66));
+        NavMeshAgent.destination = new Vector3(Random.Range(-60, 61), 1.5f, Random.Range(-60, 61));
     }
 }

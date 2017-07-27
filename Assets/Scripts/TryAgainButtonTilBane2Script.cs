@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class TryAgainButtonScript : MonoBehaviour {
+public class TryAgainButtonTilBane2Script : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -14,10 +14,9 @@ public class TryAgainButtonScript : MonoBehaviour {
 	
 	}
 
-    public void Retry()
+    public void TryAgainLevel2()
     {
-
-        SceneManager.LoadScene("Bane 1");
+        SceneManager.LoadScene("Bane 2");
 
     }
 }
