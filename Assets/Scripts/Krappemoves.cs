@@ -18,9 +18,15 @@ public class Krappemoves : MonoBehaviour
     public float hastighedUdenforSkildpadde = 15;
     public float tætPåDestination = 1;
     public Bølgescript bølge;
+    public AudioSource myAudio;
+    public AudioClip KrappeKlitren;
+
     // Use this for initialization
     void Awake() {
+
         bølge = FindObjectOfType<Bølgescript>();
+
+        myAudio = GetComponent < AudioSource > ();
     }
     void Start () {
         navigationAgent.destination = new Vector3(Random.Range(-65, 66), Krappeafstandfrajord, Random.Range(-65, 66));
@@ -55,11 +61,17 @@ public class Krappemoves : MonoBehaviour
         float distanceFraSkildpadde = (playerSkildpadde.transform.position - transform.position).magnitude;
         float distanceFraDestination = (navigationAgent.destination - transform.position).magnitude;
         print(distanceFraDestination);
-        if (distanceFraSkildpadde <= minimumDistance)
+        if (distanceFraSkildpadde <= minimumDistance && DetermineClosestCrab() == this.gameObject)
         {
             navigationAgent.destination = playerSkildpadde.transform.position;
 
             navigationAgent.speed = hastighedIndenforSkildpadde;
+
+            if (myAudio.isPlaying == false)
+            {
+                myAudio.Play();
+            }
+
         }
         else if (distanceFraDestination <= tætPåDestination)
         {
@@ -68,6 +80,25 @@ public class Krappemoves : MonoBehaviour
             navigationAgent.speed = hastighedUdenforSkildpadde;
         }
 
+    }
+
+    public GameObject DetermineClosestCrab() {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject closest = null;
+        float distance = 99999999;
+
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy")) {
+            if (enemy.GetComponent<Krappemoves>() != null) {
+                float thisDistance = (playerSkildpadde.transform.position - enemy.transform.position).magnitude;
+
+                if (thisDistance < distance) {
+                    distance = thisDistance;
+                    closest = enemy;
+                }
+            }
+        }
+        
+        return closest;
     }
 
         
