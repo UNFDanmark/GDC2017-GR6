@@ -55,7 +55,7 @@ public class Krappemoves : MonoBehaviour
         float distanceFraSkildpadde = (playerSkildpadde.transform.position - transform.position).magnitude;
         float distanceFraDestination = (navigationAgent.destination - transform.position).magnitude;
         print(distanceFraDestination);
-        if (distanceFraSkildpadde <= minimumDistance)
+        if (distanceFraSkildpadde <= minimumDistance && DetermineClosestCrab() == this.gameObject)
         {
             navigationAgent.destination = playerSkildpadde.transform.position;
 
@@ -68,6 +68,25 @@ public class Krappemoves : MonoBehaviour
             navigationAgent.speed = hastighedUdenforSkildpadde;
         }
 
+    }
+
+    public GameObject DetermineClosestCrab() {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject closest = null;
+        float distance = 99999999;
+
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy")) {
+            if (enemy.GetComponent<Krappemoves>() != null) {
+                float thisDistance = (playerSkildpadde.transform.position - enemy.transform.position).magnitude;
+
+                if (thisDistance < distance) {
+                    distance = thisDistance;
+                    closest = enemy;
+                }
+            }
+        }
+        
+        return closest;
     }
 
         
