@@ -22,7 +22,7 @@ public class Skildmoves : MonoBehaviour {
     public void FixedUpdate() {
         Move(moveSpeed * Input.GetAxis("Vertical"));
         transform.Rotate(0, rotationSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0);
-        if(Input.GetKey(KeyCode.LeftShift))
+        if(Input.GetKey(KeyCode.Space))
         {
             inSideShield = true;
             modelinside.SetActive(true);

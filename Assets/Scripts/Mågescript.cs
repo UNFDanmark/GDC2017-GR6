@@ -28,7 +28,7 @@ public class Mågescript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+        if (Input.GetKeyDown(KeyCode.Space)) {
 
             Reset();
         }
