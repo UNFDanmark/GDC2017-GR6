@@ -29,7 +29,7 @@ public class Krappemoves : MonoBehaviour
         myAudio = GetComponent < AudioSource > ();
     }
     void Start () {
-        navigationAgent.destination = new Vector3(Random.Range(-65, 66), Krappeafstandfrajord, Random.Range(-65, 66));
+        navigationAgent.destination = new Vector3(Random.Range(-60, 61), Krappeafstandfrajord, Random.Range(-60, 61));
     }
 	
 	// Update is called once per frame
@@ -75,7 +75,7 @@ public class Krappemoves : MonoBehaviour
         }
         else if (distanceFraDestination <= tætPåDestination)
         {
-            navigationAgent.destination = new Vector3(Random.Range(-65, 66), Krappeafstandfrajord, Random.Range(-65, 66));
+            navigationAgent.destination = new Vector3(Random.Range(-60, 61), Krappeafstandfrajord, Random.Range(-60, 61));
 
             navigationAgent.speed = hastighedUdenforSkildpadde;
         }
