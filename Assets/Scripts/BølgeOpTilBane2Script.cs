@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BølgeOpScript : MonoBehaviour {
+public class BølgeOpTilBane2Script : MonoBehaviour {
 
     public float tidForBølge = 0;
     public float glideTime = 2.5f;
@@ -17,5 +17,6 @@ public class BølgeOpScript : MonoBehaviour {
         tidForBølge += Time.deltaTime;
 
         transform.position = new Vector3(transform.position.x, Mathf.Lerp(200, Screen.currentResolution.height * 2, tidForBølge / glideTime), 0);
+
     }
 }
